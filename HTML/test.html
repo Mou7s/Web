@@ -11,11 +11,16 @@
 
 <body>
     <script>
-        let arr = ["I", "study", "JavaScript"];
+        function filterRange(arr, a, b) {
+            return arr.filter(item => (a <= item && item <= b));
+        }
 
-        arr.splice(1, 1); // 从索引 1 开始删除 1 个元素
+        let arr = [5, 3, 8, 1];
 
-        alert(arr); // ["I", "JavaScript"]
+        let filtered = filterRange(arr, 1, 4);
+        alert(filtered); // 3,1（匹配值）
+
+        alert(arr); // 5,3,8,1（未修改）
     </script>
 </body>
 
