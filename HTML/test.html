@@ -11,15 +11,13 @@
 
 <body>
     <script>
-        function unique(arr) {
-            /* 你的代码 */
-        }
+        var Vehicle = function (p) {
+            this.price = p;
+        };
 
-        let values = ["Hare", "Krishna", "Hare", "Krishna",
-            "Krishna", "Krishna", "Hare", "Hare", ":-O"
-        ];
+        var v = new Vehicle(prompt("",""));
+        alert(v.price) // 1000
 
-        alert(unique(values)); // Hare, Krishna, :-O
     </script>
 </body>
 
