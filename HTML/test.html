@@ -13,22 +13,16 @@
 
 
     <script>
-        function Animal(name) {
-            this.name = name;
+        function Shape() {
+            this.x = 0;
+            this.y = 0;
         }
-        Animal.prototype.color = 'white';
 
-        var cat1 = new Animal('大毛');
-        var cat2 = new Animal('二毛');
-
-        cat1.color // 'white'
-        cat2.color // 'white'
-        Animal.prototype.color = 'black';
-
-        cat1.color = "white"
-
-        alert(cat1.color);
-        alert(cat2.color);
+        Shape.prototype.move = function (x, y) {
+            this.x += x;
+            this.y += y;
+            console.info('Shape moved.');
+        };
     </script>
 </body>
 
