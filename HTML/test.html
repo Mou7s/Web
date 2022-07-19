@@ -13,15 +13,22 @@
 
 
     <script>
-        function Cat(name, color) {
+        function Animal(name) {
             this.name = name;
-            this.color = color;
         }
+        Animal.prototype.color = 'white';
 
-        var cat1 = new Cat('大毛', '白色');
+        var cat1 = new Animal('大毛');
+        var cat2 = new Animal('二毛');
 
-        cat1.name // '大毛'
-        cat1.color // '白色'
+        cat1.color // 'white'
+        cat2.color // 'white'
+        Animal.prototype.color = 'black';
+
+        cat1.color = "white"
+
+        alert(cat1.color);
+        alert(cat2.color);
     </script>
 </body>
 
